@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navkis College of Engineering, Hassan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8); /* Low transparency */
+            z-index: -1;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        header img {
+            height: 60px;
+        }
+        nav {
+            background-color: #0055a5;
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+            position: relative;
+        }
+        nav a {
+            color: white;
+            text-align: center;
+            padding: 10px 16px;
+            text-decoration: none;
+            margin-left: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #0077d6;
+            transform: scale(1.1);
+        }
+        .container {
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .home-content {
+            margin: 20px 0;
+        }
+        .home-content h2 {
+            color: #003366;
+            animation: fadeInDown 1s;
+        }
+        .home-content p {
+            margin: 10px 0;
+            line-height: 1.6;
+            animation: fadeInUp 1s;
+        }
+        .college-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin: 0;
+        }
+        .events-box {
+            background-color: rgba(0, 51, 102, 0.7); /* Transparent background */
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: bounceIn 1s;
+        }
+        .events-content {
+            position: absolute;
+            width: 100%;
+            animation: scroll 10s linear infinite;
+        }
+        @keyframes scroll {
+            0% {
+                top: 100%;
+            }
+            100% {
+                top: -100%;
+            }
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            animation: fadeInUp 1s;
+        }
+        .event-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            animation: fadeInLeft 1s;
+        }
+        .event-item img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .events-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('sports-background.png') no-repeat center center;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        .faculty-table, .volunteers-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            animation: fadeInUp 1s;
+        }
+        .faculty-table th, .faculty-table td, .volunteers-table th, .volunteers-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .faculty-table th, .volunteers-table th {
+            background-color: #003366;
+            color: white;
+        }
+        .faculty-table tr:nth-child(even), .volunteers-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .faculty-table tr:hover, .volunteers-table tr:hover {
+            background-color: #ddd;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="college-logo.png" alt="Navkis College of Engineering, Hassan Logo">
+    <h1>Navkis College of Engineering - SPORTOPIA</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="schedules.html">Events</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <img src="college-photo.jpg" alt="Navkis College of Engineering, Hassan" class="college-image">
+
+	<center><P>" Unbreakable Spirit , Unstoppable Game "</p></center>
+    <div class="events-box">
+        <div class="events-content">
+            <div class="event-item">
+            
+                <p>Event 1: Volleyball</p>
+            </div>
+            <div class="event-item">
+                <p>Event 2:Basketball </p>
+            </div>
+            <div class="event-item">
+                <p>Event 3:Throwball</p>
+            </div>
+  <div class="event-item">
+                <p>Event 4:Table tennis</p>
+            </div>
+  <div class="event-item">
+                <p>Event 5:Carrom</p>
+            </div>
+  <div class="event-item">
+                <p>Event 6:Chess</p>
+            </div>
+ <div class="event-item">
+                <p>Event 7:FootBall</p>
+            </div>
+
+
+            <!-- Add more events as needed -->
+        </div>
+    </div>
+
+    <div class="home-content">
+        <h2>SPORTS OBJECTIVES</h2>
+<P>
+The main objectives of sports are their goals and purposes that contribute to both individual and societal well-being. Here are some of the key objectives of sports: </p>
+<p>
+• Physical Health and Fitness: One of the main objectives of sports is to foster physical health and fitness. Engaging in sports activities regularly assists individuals in maintaining a healthy weight,strengthenmg muscles and bones, enhancing cardiovascular health, and improving overall physical well-being. 
+</p><p>
+• Skill Development: Sports offer a platform for individuals to cultivate and refine a diverse array of skills. These encompass coordination, agility, speed, endurance, teamwork, leadership, and strategic thinking. Through consistent practice and competitive engagement, athletes continuously enhance and polish their abilities. 
+</p><p>
+• Social Interaction and Teamwork: Sports foster social interaction and promote teamwork. 
+Athletes learn to collaborate with teammates, communicate effectively, resolve conflicts, and develop a sense of camaraderie. These interpersonal skills are valuable not only in sports but also in various aspects of life, including work and relationships.</p><p> 
+• Emotional Well-being: Engaging in sports can have significant positive effects on mental and emotional well-being. Physical activity releases endorphins, which are natural mood lifters, and participating in sports can reduce stress, anxiety, and depression. Additionally, the sense of accomplishment from achieving goals in sports contributes to self-esteem and confidence. </p><p>
+• Character Building: Sports teach valuable life lessons and contribute to character development.Athletes learn the importance of discipline, perseverance, resilience, and sportsmanship. They also experience success and failure, which are essential for personal growth and resilience in facing challenges. </p><p>
+• Community Engagement: Sports play a role in community building and engagement. They bring 
+people together from diverse backgrounds and create a sense of belonging and unity. Sporting events and activities often serve as platforms for cultural exchange, celebration, and community development. </p><p>
+• Education and Academic Performance: In many ca3es, participation in sports is linked to 
+improved academic performance. Students involved in sports often exhibit better focus, time 
+management skills, and academic motivation. Sports also teach important lessons about goal setting, dedication, and hard work, which can translate into academic success. </p><p>
+• Healthy Competition: Sports promote healthy competition, where individuals and teams strive to achieve their best while respecting rules, opponents, and officials. Competing in sports teaches valuable lessons about fair play, sportsmanship, and ethical conduct, laying the foundation for responsible and respectful behavior on and off the field.</P>
+
+    </div>
+
+    <div class="home-content">
+        <h2>Our Faculty</h2>
+        <table class="faculty-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dr. M Venugopal Rao</td>
+                    <td>Principal</td>
+                </tr>
+                <tr>
+                    <td>Dr. Manjunatha C R</td>
+                    <td>Assoc. Professor & HOD, Dept. of Chemistry</td>
+                </tr>
+                <tr>
+                    <td>Mr. Abhishek M S</td>
+                    <td>Physical Education Director</td>
+                </tr>
+                <tr>
+                    <td>Mr. Kuldeepak Kumar</td>
+                    <td>Asst. Professor, Dept. Of ME</td>
+                </tr>
+                <tr>
+                    <td>Dr. Ravikiran H.K.</td>
+                    <td>Assoc. Professor, Dept. Of ECE</td>
+                </tr>
+                <tr>
+                    <td>Ms. Shilpa</td>
+                    <td>Asst. Professor, Dept. Of CSE</td>
+                </tr>
+                <tr>
+                    <td>Mr. Raghunandan. R</td>
+                    <td>Asst. Professor, Dept. Of AI & DS Engineering</td>
+                </tr>
+                <tr>
+                    <td>Mr. TejuRK</td>
+                    <td>Asst. Professor, Dept. Of CE</td>
+                </tr>
+                <tr>
+                    <td>Mr. NaveenN</td>
+                    <td>Asst. Professor, Dept. Of Mathematics</td>
+                </tr>
+                <!-- Add more faculty members as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="home-content">
+        <h2>Sports Volunteers</h2>
+        <table class="volunteers-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Branch</th>
+                </tr>
+            </thead>
+            <tbody>
+		<tr><td>Amith Y</td><td>MCA</td></tr>
+                <tr><td>Bharath MM</td><td>AI&ML</td></tr>
+                <tr><td>Yashaswini</td><td>AI&ML</td></tr>
+                <tr><td>Nimitha KA</td><td>AI&DS</td></tr>
+                <tr><td>Jeevan HV</td><td>AI&DS</td></tr>
+                <tr><td>Tejas AR</td><td>ECE</td></tr>
+                <tr><td>Keerthana S</td><td>ECE</td></tr>
+                <tr><td>Hruthik Gowda</td><td>CSE</td></tr>
+                <tr><td>Pooja GM</td><td>CSE</td></tr>
+                <tr><td>Shashank CC</td><td>CSE</td></tr>
+                <tr><td>Vidhwan</td><td>CSE</td></tr>
+                <tr><td>Suhas Gowda</td><td>CIVIL</td></tr>
+                <tr><td>Khasim</td><td>CIVIL</td></tr>
+                <tr><td>Darshan S S</td><td>CSE</td></tr>
+                <tr><td>Choornika</td><td>CSE</td></tr>
+                <tr><td>Shashank</td><td>CSE</td></tr>
+                <tr><td>Vijay Patil</td><td>CSE</td></tr>
+                <tr><td>Gagan Gowda</td><td>AI&DS</td></tr>
+                <tr><td>Shashank</td><td>AI&DS</td></tr>
+                <tr><td>Karrthik MK</td><td>ECE</td></tr>
+                <tr><td>Jeevan</td><td>ECE</td></tr>
+                <tr><td>Anvitha Jain</td><td>CSE</td></tr>
+                <tr><td>Harsha C M</td><td>ECE</td></tr>
+                <tr><td>Charan HC</td><td>CSE</td></tr>
+                <tr><td>Srujan</td><td>AI&DS</td></tr>
+                <tr><td>Bhuvana MV</td><td>CSE</td></tr>
+                <!-- Add more volunteers as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<footer>
+    Navkis College of Engineering, Hassan | KIADB. Thimmanahalli Industrial Area, Kandali, NH75, Hassan, Karnataka 573217
+</footer>
+
+</body>
+</html>

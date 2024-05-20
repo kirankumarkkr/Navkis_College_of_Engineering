@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navkis College of Engineering, Hassan - Sports Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8); /* Low transparency */
+            z-index: -1;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        header img {
+            height: 60px;
+        }
+        nav {
+            background-color: #0055a5;
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+            position: relative;
+        }
+        nav a {
+            color: white;
+            text-align: center;
+            padding: 10px 16px;
+            text-decoration: none;
+            margin-left: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #0077d6;
+            transform: scale(1.1);
+        }
+        .container {
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: fadeIn 1s;
+        }
+        h2 {
+            color: #003366;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeInDown 1s;
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            animation: fadeInUp 1s;
+        }
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .schedule-table th {
+            background-color: #003366;
+            color: white;
+        }
+        .schedule-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .schedule-table tr:hover {
+            background-color: #ddd;
+            transition: background-color 0.3s ease;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            animation: fadeInUp 1s;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="college-logo.png" alt="Navkis College of Engineering, Hassan Logo">
+    <h1>SPORTOPIA - Sports Events</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="schedules.html">Events</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <h2>Sports Events</h2>
+
+    <h3 id="basketball">Events</h3>
+    <table class="schedule-table">
+        <thead>
+            <tr>
+                <th>Sports</th>
+                <th>Players</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Volleyball </td>
+                <td>6+1</td>
+          
+            </tr>
+	<tr>
+                <td>Basketball </td>
+                <td>5+1</td>
+          
+            </tr>
+<tr>
+                <td>Throwball </td>
+                <td>7+1</td>
+          
+            </tr>
+<tr>
+                <td>Table tennis </td>
+                <td>3+1</td>
+          
+            </tr>
+<tr>
+                <td>Carrom </td>
+                <td>6</td>
+          
+            </tr>
+<tr>
+                <td>Chess </td>
+                <td>3</td>
+          
+            </tr>
+<tr>
+                <td>Foot ball</td>
+                <td>7+3</td>
+          
+            </tr>
+<tr>
+                <td>Cricket </td>
+                <td>8+1</td>
+          
+            </tr>
+            <!-- Add more basketball events as needed -->
+        </tbody>
+    </table>
+	<center><h2 style="color:navyblue;"> NOTE: The sports events will be announced through the respective class co-ordinates </h2></center>
+
+   </div>
+
+<footer>
+   <h3> Navkis College of Engineering Hassan</h3><br>
+<h3>OUR LOCATION</h3><p>
+KIADB. Thimmanahalli Industrial Area,Kandali,NH75, Hassan,Karnataka 573217</p>
+</footer>
+
+</body>
+</html>
